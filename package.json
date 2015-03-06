@@ -1,0 +1,42 @@
+{
+     "name": "nlog",
+     "version": "0.0.1",
+     "description": "A Tiny Blog App",
+     "main": "app.js",
+     "author": "Warren Haskins <warrenhaskins@gmail.com> (http://www.villainyhq.com/)",
+     "license": "MIT",
+     "dependencies" : {
+          "co" : "*",
+          "koa" : "*",
+          "koa-bodyparser" : "*",
+          "koa-router"  : "*",
+          "koa-resource-router" : "*",
+          "koa-passport" : "*",
+          "koa-session" : "*",
+          "koa-flash" : "*",
+          "koa-swig" : "*",
+          "koajs-nunjucks" : "*",
+          "koa-mount" : "*",
+          
+          "mongodb" : "*",
+          "mongorito": "^0.6.10",
+          "passport-local" : "*",
+          "crypto" : "*",
+          "lodash" : "*",
+          "node-mandrill" : "*",
+          "swig" : "*",
+          "moment" : "*",
+          "joi" : "*"
+     },
+     "devDependencies" : {
+          "gulp": "*",
+          "gulp-watch" : "*",
+          "gulp-less": "*",
+          "gulp-minify-css": "*",
+          "gulp-notify": "*",
+          "gulp-uglify": "*",
+          "gulp-concat": "*",
+          "gulp-rename": "*",
+          "gulp-plumber" : "*"
+     }
+}

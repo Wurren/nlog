@@ -1,0 +1,30 @@
+{% macro input(action, method, id) %}
+
+<form action="{{ action }}{{ '/' + id if method }}" method="post">
+
+     {% if method %}
+          <input type="hidden" name="_method" value="PUT"/>
+     {% endif %}
+
+     <div class="field-wrap">
+          <label for="">Post Title</label>
+          <input type="text" name="title" class="field" value="{{ post.title if method }}">
+     </div>
+
+     <div class="field-wrap">
+          <label for="body">Body</label>
+          <textarea name="body" class="field">{{ post.body if method }}</textarea>
+     </div>
+
+     <div class="field-wrap">
+          <label for="">Published</label>
+          <input type="checkbox" name="published" value="true" {{ 'checked' if post.published }}>
+     </div>
+
+     <div class="submit-wrap">
+          <button class="btn">Create Post</button>
+     </div>
+
+</form>
+
+{% endmacro %}

@@ -1,0 +1,27 @@
+{% extends 'layout.liquid' %}
+
+{% block content %}
+
+<div class="form-wrap">
+     <h2>Login</h2>
+     <form action="/login" method="post">
+          <div class="field-wrap">
+               <label for="email">Email Address</label>
+               <input type="text" name="email" class="field">
+          </div>
+          <div class="field-wrap">
+               <label for="password">Password</label>
+               <input type="password" name="password" class="field">
+          </div>
+          <div class="submit-wrap">
+               <button>Login</button>
+               <a href="/forgotten">Forgotten your password?</a>
+          </div>
+     </form>
+     {% if error %}
+     <div class="error">{{ error }}</div>
+     {% endif %}
+     <a href="/signup">Create an account</a>
+</div>
+
+{% endblock%}

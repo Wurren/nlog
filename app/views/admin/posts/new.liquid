@@ -1,0 +1,10 @@
+{% extends 'admin/layout.liquid' %}
+{% include 'partials/form_posts.liquid' %}
+
+{% block content %}
+
+<h1>New Post</h1>
+
+{{ input('/admin/posts', false) }}
+
+{% endblock%}

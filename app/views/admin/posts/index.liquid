@@ -1,0 +1,21 @@
+{% extends 'admin/layout.liquid' %}
+
+{% block content %}
+
+<h1>{{ posts.length | default(0) }} Posts</h1>
+
+{% for post in posts %}
+     <ul>
+          <li>{{ post.attributes.title }}</li>
+          <li><a href="/admin/posts/{{ post.attributes._id }}/edit">Edit</a></li>
+     </ul>
+{% endfor %}
+
+{% if posts.length == 0 %}
+     <div class="no-posts">No posts!</div>
+{% endif %}
+
+
+<a href="/admin/posts/new" class="btn">New Post</a>
+
+{% endblock%}
